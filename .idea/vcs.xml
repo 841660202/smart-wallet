@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/account-abstraction" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/forge-std" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/forge-std/lib/ds-test" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/openzeppelin-contracts" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/openzeppelin-contracts/lib/erc4626-tests" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/openzeppelin-contracts/lib/forge-std" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/openzeppelin-contracts/lib/forge-std/lib/ds-test" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/p256-verifier" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/p256-verifier/lib/forge-std" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/p256-verifier/lib/forge-std/lib/ds-test" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/p256-verifier/lib/openzeppelin-contracts" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/p256-verifier/lib/openzeppelin-contracts/lib/erc4626-tests" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/p256-verifier/lib/openzeppelin-contracts/lib/forge-std" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/p256-verifier/lib/openzeppelin-contracts/lib/forge-std/lib/ds-test" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/safe-singleton-deployer-sol" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/safe-singleton-deployer-sol/lib/forge-std" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/solady" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/webauthn-sol" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/webauthn-sol/lib/FreshCryptoLib" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/webauthn-sol/lib/forge-std" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/webauthn-sol/lib/forge-std/lib/ds-test" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/webauthn-sol/lib/openzeppelin-contracts" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/webauthn-sol/lib/openzeppelin-contracts/lib/erc4626-tests" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/webauthn-sol/lib/openzeppelin-contracts/lib/forge-std" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/webauthn-sol/lib/openzeppelin-contracts/lib/forge-std/lib/ds-test" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/webauthn-sol/lib/solady" vcs="Git" />
+  </component>
+</project>

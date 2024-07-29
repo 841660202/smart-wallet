@@ -17,3 +17,7 @@ docs/
 .VSCodeCounter/
 
 .certora_internal/
+
+# dep
+
+lib/

@@ -1,0 +1,54 @@
+{
+	"files": [
+		{
+			"path": "src/CoinbaseSmartWallet.sol",
+			"bookmarks": [
+				{
+					"line": 300,
+					"column": 8,
+					"label": ""
+				},
+				{
+					"line": 315,
+					"column": 4,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "test/CoinbaseSmartWallet/ValidateUserOp.t.sol",
+			"bookmarks": [
+				{
+					"line": 20,
+					"column": 4,
+					"label": ""
+				},
+				{
+					"line": 48,
+					"column": 4,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/ERC1271.sol",
+			"bookmarks": [
+				{
+					"line": 144,
+					"column": 4,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/MultiOwnable.sol",
+			"bookmarks": [
+				{
+					"line": 93,
+					"column": 4,
+					"label": ""
+				}
+			]
+		}
+	]
+}

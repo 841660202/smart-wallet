@@ -45,38 +45,38 @@ contract TestValidateUserOp is SmartWalletTestBase {
         vm.expectRevert(MultiOwnable.Unauthorized.selector);
         account.validateUserOp(userOp, t.userOpHash, t.missingAccountFunds);
     }
-
+    // 测试使用Passekey签名的成功情况
     function test_succeedsWithPasskeySigner() public {
-        _TestTemps memory t;
-        t.userOpHash = keccak256("123");
-        WebAuthnInfo memory webAuthn = Utils.getWebAuthnStruct(t.userOpHash);
+        _TestTemps memory t; // 定义一个临时变量结构体 t
+        t.userOpHash = keccak256("123"); // 计算一个用户操作哈希值
+        WebAuthnInfo memory webAuthn = Utils.getWebAuthnStruct(t.userOpHash); // 获取 WebAuthn 结构体
 
-        (bytes32 r, bytes32 s) = vm.signP256(passkeyPrivateKey, webAuthn.messageHash);
-        s = bytes32(Utils.normalizeS(uint256(s)));
+        (bytes32 r, bytes32 s) = vm.signP256(passkeyPrivateKey, webAuthn.messageHash); // 使用 P256 曲线签名
+        s = bytes32(Utils.normalizeS(uint256(s))); // 规范化 s 值
         bytes memory sig = abi.encode(
             CoinbaseSmartWallet.SignatureWrapper({
-                ownerIndex: 1,
+                ownerIndex: 1, // 签名者的索引
                 signatureData: abi.encode(
                     WebAuthn.WebAuthnAuth({
-                        authenticatorData: webAuthn.authenticatorData,
-                        clientDataJSON: webAuthn.clientDataJSON,
-                        typeIndex: 1,
-                        challengeIndex: 23,
-                        r: uint256(r),
-                        s: uint256(s)
+                        authenticatorData: webAuthn.authenticatorData, // WebAuthn 验证器数据
+                        clientDataJSON: webAuthn.clientDataJSON, // WebAuthn 客户端数据
+                        typeIndex: 1, // 类型索引
+                        challengeIndex: 23, // 挑战索引
+                        r: uint256(r), // 签名的 r 值
+                        s: uint256(s) // 签名的 s 值
                     })
                 )
             })
         );
 
-        vm.etch(account.entryPoint(), address(new MockEntryPoint()).code);
-        MockEntryPoint ep = MockEntryPoint(payable(account.entryPoint()));
+        vm.etch(account.entryPoint(), address(new MockEntryPoint()).code); // 使用 MockEntryPoint 替换入口点合约的代码
+        MockEntryPoint ep = MockEntryPoint(payable(account.entryPoint())); // 创建 MockEntryPoint 实例
 
-        UserOperation memory userOp;
-        // Success returns 0.
-        userOp.signature = sig;
-        assertEq(ep.validateUserOp(address(account), userOp, t.userOpHash, t.missingAccountFunds), 0);
+        UserOperation memory userOp; // 定义一个用户操作结构体
+        userOp.signature = sig; // 设置用户操作的签名
+        assertEq(ep.validateUserOp(address(account), userOp, t.userOpHash, t.missingAccountFunds), 0); // 验证用户操作并断言返回值为 0
     }
+
 
     function test_reverts_whenSelectorInvalidForReplayableNonceKey() public {
         UserOperation memory userOp;
