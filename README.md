@@ -110,3 +110,63 @@ make deploy
 
 ## Influences
 Much of the code in this repository started from Solady's [ERC4337](https://github.com/Vectorized/solady/blob/main/src/accounts/ERC4337.sol) implementation. We were also influenced by [DaimoAccount](https://github.com/daimo-eth/daimo/blob/master/packages/contract/src/DaimoAccount.sol), which pioneered using passkey signers on ERC-4337 accounts, and [LightAccount](https://github.com/alchemyplatform/light-account).
+
+
+
+
+
+
+1. routes
+
+post请求 https://li.quest/v1/advanced/routes
+
+参数
+```json
+// op 链 usdt -> op (usdt需要check allowance & approve)
+{
+    "fromAddress": "0x3B98dbe060d51969389E190c27f7e572E7C64280", // 替换aa钱包地址
+    "fromAmount": "20000",
+    "fromChainId": 10,
+    "fromTokenAddress": "0x94b008aA00579c1307B0EF2c499aD98a8ce58e58", 
+    "toChainId": 10,
+    "toTokenAddress": "0x4200000000000000000000000000000000000042",
+    "options": {
+        "integrator": "dev.jumper.exchange",
+        "order": "CHEAPEST",
+        "slippage": 0.005,
+        "maxPriceImpact": 0.4,
+        "allowSwitchChain": true
+    }
+}
+```
+
+2. 使用返回数据中的一个route，获取step transaction
+
+post请求 https://li.quest/v1/advanced/stepTransaction
+
+参数：上一步routes 返回结果的某个route的，steps数组中的一步作为参数
+返回结果中的 transactionRequest 
+```json
+transactionRequest:{
+    "data": "0x......00",
+    "to": "0x1231DEB6f5749EF6cE6943a275A1D3E7486F4EaE",
+    "value": "0x0",
+    "gasPrice": "0x123d40",
+    "gasLimit": "0xcf470",
+    "from": "0x3B98dbe060d51969389E190c27f7e572E7C64280",
+    "chainId": 10
+}
+```
+
+
+[1,2,3,4,5]
+
+
+
+forge verify-contract \
+    --chain-id 11155420 \
+    --watch \
+    --etherscan-api-key 2ZZZW99XYCDTT8TQYCCTGH1QYHJD1ZUUEG \
+    --compiler-version v0.8.23 \
+    0xF419B15a99e5aa6CE0947f625646A86e8527EC3C \
+    CoinbaseSmartWallet

@@ -16,7 +16,6 @@ contract TestUpgradeToAndCall is SmartWalletTestBase {
     }
 
     function testUpgradeToAndCall() public {
-        // 升级到新的合约
         account.upgradeToAndCall(newImplementation, abi.encodeWithSignature("dummy()"));
         Dummy(address(account)).dummy();
     }

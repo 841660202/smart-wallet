@@ -20,5 +20,10 @@ contract MultiOwnableTestBase is Test {
         owners.push(owner1Bytes);
         owners.push(owner2Bytes);
         mock.init(owners);
+
+        // 输出 owner1Address 和 owner1Bytes
+        // 输出 owner1Address 和 owner1Bytes
+        console2.logAddress(owner1Address);
+        console2.logBytes(owner1Bytes);
     }
 }

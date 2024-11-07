@@ -104,7 +104,7 @@ contract CoinbaseSmartWallet is ERC1271, IAccount, MultiOwnable, UUPSUpgradeable
             }
         }
     }
-    // 在合约初始化时没有实际的所有者,确保合约在部署时的所有者状态是已知的和可控的
+
     constructor() {
         // Implementation should not be initializable (does not affect proxies which use their own storage).
         bytes[] memory owners = new bytes[](1);

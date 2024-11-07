@@ -4,6 +4,31 @@
 			"path": "src/CoinbaseSmartWallet.sol",
 			"bookmarks": [
 				{
+					"line": 50,
+					"column": 4,
+					"label": ""
+				},
+				{
+					"line": 158,
+					"column": 4,
+					"label": ""
+				},
+				{
+					"line": 169,
+					"column": 4,
+					"label": ""
+				},
+				{
+					"line": 195,
+					"column": 12,
+					"label": ""
+				},
+				{
+					"line": 296,
+					"column": 4,
+					"label": ""
+				},
+				{
 					"line": 300,
 					"column": 8,
 					"label": ""
@@ -45,6 +70,161 @@
 			"bookmarks": [
 				{
 					"line": 93,
+					"column": 4,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/CoinbaseSmartWalletFactory.sol",
+			"bookmarks": [
+				{
+					"line": 49,
+					"column": 8,
+					"label": ""
+				},
+				{
+					"line": 64,
+					"column": 4,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "test/CoinbaseSmartWallet/CanSkipChainIdValidation.t.sol",
+			"bookmarks": [
+				{
+					"line": 5,
+					"column": 62,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "test/CoinbaseSmartWallet/Implementation.t.sol",
+			"bookmarks": [
+				{
+					"line": 14,
+					"column": 0,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "test/CoinbaseSmartWallet/UpgradeToAndCall.t.sol",
+			"bookmarks": [
+				{
+					"line": 13,
+					"column": 4,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "lib/account-abstraction/contracts/core/EntryPoint.sol",
+			"bookmarks": [
+				{
+					"line": 99,
+					"column": 16,
+					"label": ""
+				},
+				{
+					"line": 245,
+					"column": 27,
+					"label": ""
+				},
+				{
+					"line": 301,
+					"column": 8,
+					"label": ""
+				},
+				{
+					"line": 324,
+					"column": 0,
+					"label": ""
+				},
+				{
+					"line": 340,
+					"column": 12,
+					"label": ""
+				},
+				{
+					"line": 341,
+					"column": 12,
+					"label": ""
+				},
+				{
+					"line": 406,
+					"column": 8,
+					"label": ""
+				},
+				{
+					"line": 407,
+					"column": 8,
+					"label": ""
+				},
+				{
+					"line": 416,
+					"column": 12,
+					"label": ""
+				},
+				{
+					"line": 432,
+					"column": 12,
+					"label": ""
+				},
+				{
+					"line": 559,
+					"column": 4,
+					"label": ""
+				},
+				{
+					"line": 560,
+					"column": 4,
+					"label": ""
+				},
+				{
+					"line": 561,
+					"column": 0,
+					"label": ""
+				},
+				{
+					"line": 574,
+					"column": 0,
+					"label": ""
+				},
+				{
+					"line": 584,
+					"column": 4,
+					"label": ""
+				},
+				{
+					"line": 632,
+					"column": 8,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "test/CoinbaseSmartWallet/IsValidSignature.t.sol",
+			"bookmarks": [
+				{
+					"line": 117,
+					"column": 4,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "lib/account-abstraction/contracts/interfaces/UserOperation.sol",
+			"bookmarks": [
+				{
+					"line": 62,
+					"column": 4,
+					"label": ""
+				},
+				{
+					"line": 84,
 					"column": 4,
 					"label": ""
 				}

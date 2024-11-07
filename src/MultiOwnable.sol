@@ -19,10 +19,10 @@ struct MultiOwnableStorage {
     ///      The `owner` bytes should either be
     ///         - An ABI encoded Ethereum address
     ///         - An ABI encoded public key
-    mapping(uint256 index => bytes owner) ownerAtIndex; // 合约所有者
+    mapping(uint256 index => bytes owner) ownerAtIndex;
     /// @dev Mapping of bytes to booleans indicating whether or not
     ///      bytes_ is an owner of this contract.
-    mapping(bytes bytes_ => bool isOwner_) isOwner; // 合约所有者
+    mapping(bytes bytes_ => bool isOwner_) isOwner;
 }
 
 /// @title Multi Ownable

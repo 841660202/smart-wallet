@@ -63,7 +63,7 @@ contract CoinbaseSmartWalletFactory {
     ///
     /// @return The predicted account deployment address.
     function getAddress(bytes[] calldata owners, uint256 nonce) external view returns (address) {
-        return LibClone.predictDeterministicAddress(initCodeHash(), _getSalt(owners, nonce), address(this));
+        return LibClone.predictDeterministicAddress(initCodeHash(), _getSalt(owners, nonce)/**为了保证每次创建的合约都是唯一的 */, address(this));
     }
 
     /// @notice Returns the initialization code hash of the account:
